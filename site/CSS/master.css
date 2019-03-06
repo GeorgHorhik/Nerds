@@ -51,7 +51,7 @@ section:first-of-type {
   background-color: #eee;
 }
 
-.content-wrap {
+.content-wrap{
   width: 1160px;
   padding-left: 20px;
   padding-right: 20px;
@@ -121,7 +121,7 @@ header .content-wrap {
   color: #a7a7a7;
 }
 
-. main-page-content {
+.main-page-content {
   flex-grow: 1;
 }
 
@@ -232,6 +232,80 @@ header .content-wrap {
 }
 
 /* MAIN */
+.just-wrap{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 76px;
+}
+
+.just-wrap>div:first-child{
+  margin-top: 80px;
+  width: 660px;
+}
+
+.just-wrap>div:first-child h2{
+  display: inline-block;
+  width:650px;
+}
+
+.just-wrap>div:first-child p{
+  width: 616px;
+}
+
+.just-wrap>div:first-child  li{
+  list-style: none;
+  margin-left: 35px;
+  margin-bottom: 30px;
+}
+
+.just-wrap>div:last-child{
+  width: 360px;
+  margin-top: 40px;
+}
+
+.just-wrap>div:last-child p{
+  margin-bottom: 45px;
+  margin-top: 40px;
+}
+
+.just-wrap table{
+
+  
+}
+
+.tabld{
+  margin-right: 18px;
+}
+
+.partners-list{
+  display: flex;
+  justify-content: space-around;
+}
+
+.partners-logo:first-child{
+  margin-top: 62px;
+  margin-bottom: 50px;
+
+}
+
+.partners-logo:nth-child(2){
+  margin-top: 46px;
+  margin-bottom: 44px;
+
+}
+.partners-logo:nth-child(3){
+  margin-top: 65px;
+  margin-bottom: 63px;
+
+}
+
+.partners-logo:last-child{
+  margin-top: 52px;
+  margin-bottom: 44px;
+
+}
+
+
 /*FORM LABELs*/
 .form-radio {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath fill='%234D4D4D' d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3C/svg%3E");
@@ -261,7 +335,12 @@ header .content-wrap {
   top: 505px;
   left: 815px;
 }
-
+.slider__label{
+  position: absolute;
+  top: 0px; 
+  left: 150px;
+  z-index: 300;
+}
 #slider-1:checked~.slider__label label[for="slider-1"],
 #slider-2:checked~.slider__label label[for="slider-2"],
 #slider-3:checked~.slider__label label[for="slider-3"] {
@@ -449,10 +528,34 @@ main .services {
   color: #666666;
 }
 
-.map {
-  width: 100%
+.mapp{
+  position: relative;
 }
 
+.adress{
+  position: absolute;
+  top: 2030px;
+  z-index: 100;
+  width: 202px;
+  background-color: #fff;
+  padding: 54px 68px 47px 50px;
+}
+
+.adress h4{
+  margin: 0;
+}
+
+.partners hr{
+  margin-bottom:80px;
+}
+
+.adress .button{
+  text-transform: uppercase;
+  display: block;
+  padding:  19px 40px;
+  width: 138px;
+  margin: 0;
+}
 .main-footer strong {
   font-size: 36px;
   font-weight: 700;
@@ -465,6 +568,24 @@ main .services {
 
 .main-footer li {
   list-style: none;
+}
+
+.main-footer>div{
+  display: flex;
+  
+  padding-top: 69px;
+  padding-bottom: 69px;
+ 
+}
+
+.main-footer ul{
+  display: flex;
+  padding-right: 140px;
+  
+}
+
+.main-footer li{
+  margin-right: 10px;
 }
 
 .social-media a {
