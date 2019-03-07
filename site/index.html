@@ -217,7 +217,8 @@
             <p>
               тел. +7 (812) 275-75-75
             </p>
-            <a href="" class="button">Напишите нам</a>
+            <a href="#view-popup" id="close-popup" class="button">Напишите нам</a>
+            
           </div>
         </article>
       </section>
@@ -236,6 +237,32 @@
       <p>Скидка 10% для друзей из социальных сетей.</p></div>
     </div>
   </footer>
-</body>
+<!--Popup-->
 
+<div class="content-wrap">
+    <form action="POST" class="popup__write-as " id="view-popup">
+      <h2>Напишите нам</h2>
+      <a href="#close-popup" >Закрыть</a>
+        <div class="form__inputt">
+          <div>
+        <label for="form__FIO" >Ваше имя:</label><br>
+        <input id="form__FIO" type="text" placeholder="Имя Фамилия">
+      </div>
+    <div>
+        <label for="form__EMAIL" >Ваш e-mail:</label><br>
+        <input type="email" id="form__EMAIL" placeholder="email@example.com">
+          </div>
+        </div>
+          <div class="form__textarea">
+        <label for="form__textarea">Текст письма:</label><br>
+        <textarea name="letter" id="form__textarea" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        </div>
+        <div>
+        <button type="submit" class="button">ОТПРАВИТЬ</button>
+        </div>    
+        </form>
+        </div>  
+
+
+    </body>
 </html>

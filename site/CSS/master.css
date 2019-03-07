@@ -635,3 +635,96 @@ main .services {
   content: url(../svg/insta-icon.svg);
   margin: 30px 29px;
 }
+
+
+/* FORM */
+
+.popup__write-as{
+  position: fixed;
+  bottom: 160px;
+  z-index: 350;
+ 
+
+  
+  display: flex;
+  flex-direction: column;
+  width: 760px;
+  margin-left: 100px ;
+  padding:73px 100px 84px 100px;
+  box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+  background-color: #fff;
+
+  }
+
+  .popup__write-as h2{
+    margin-bottom: 49px;
+  }
+  
+  .popup__write-as div input{
+    display: inline-block;
+    width: 344px;
+    padding: 18px 0px 18px  16px ;
+    font: inherit;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #d7dcde;
+    
+    
+  }
+
+  .popup__write-as .form__inputt{
+    display: flex;
+    margin-bottom: 36px;
+  }
+.form__inputt>div{
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
+  .popup__write-as textarea{
+    width: 760px;
+    height: 118px;
+    display: inline-block;
+    font: inherit;
+        background-color: #fff;
+        color: #000;
+        border: 2px solid #d7dcde;
+        padding-top:14px ;
+        padding-left: 15px;
+        
+  }
+
+
+  .popup__write-as label[for="form__textarea"]{
+
+    
+    margin-bottom: 12px;
+    
+    display: inline-block;
+  } 
+
+  .popup__write-as .button{
+    padding: 18px 83px;
+    margin-top: 47px;
+  }
+
+  .popup__write-as:not(:target){
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s, visibility 1s;
+  }
+  a[href="#close-popup"]:target{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s, visibility 1s;
+
+  }
+  a[href="#close-popup"]{
+    font-size: 0px;
+    background: url(../svg/close-cross.svg) no-repeat;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 21px;
+    height: 21px;
+  }
