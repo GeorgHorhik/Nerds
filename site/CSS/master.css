@@ -133,7 +133,9 @@ header .content-wrap {
   width: 300%;
   transition: transform 0.8s ease;
 }
-
+.slider_overflow .button{
+  margin-bottom: 25px ;
+}
 .slider {
   overflow: hidden;
   margin: 0;
@@ -386,6 +388,7 @@ header .content-wrap {
 #slider-3:checked~.slider_overflow {
   transform: translate(-2320px);
 }
+
 
 .button:hover,
 .button:focus {
@@ -640,8 +643,8 @@ main .services {
 /* FORM */
 
 .popup__write-as{
-  position: fixed;
-  bottom: 160px;
+  position: absolute;
+  top: 1800px;
   z-index: 350;
  
 
@@ -697,7 +700,7 @@ main .services {
 
   .popup__write-as label[for="form__textarea"]{
 
-    
+
     margin-bottom: 12px;
     
     display: inline-block;
