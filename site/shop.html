@@ -1,35 +1,170 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="CSS/main.css">
   <title>Document</title>
 </head>
-<body>
-  <header class="Main-header">
-    <img src="../svg/nerds-logo.svg" alt="Логотип" class="Header-logo" >
-    <nav class="Page-nav">
-      <ul>
-        <li><a href="#">Студия</a></li>
-        <li><a href="#">Клиенты</a></li>
-        <li><a href="#">Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
+
+<body class="Page-shop">
+  <header class="Main-header ">
+    <nav class="Nav-main  content-wrap ">
+      <a href="index.html"><img src="svg/nerds-logo.svg" alt="Логотип" class="Header-logo"></a>
+
+          <ul class="Page-nav ">
+            <li><a href="#">Студия</a></li>
+            <li><a href="#">Клиенты</a></li>
+            <li class="active-link"><a href="shop.html">Магазин</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+
+          <ul class="user-nav">
+
+            <li><a href="#" id="cart">Корзина</a></li>
+          </ul>
+    </nav>
+  </header>
+  <main class="shop__content">
+    <h1 class="shop__title">Магазин готовых шаблонов</h1>
+    <div class="content-wrap">
+      <section class="shop-form">
+        <h2 class="visually-hidden">Фильтры поиска</h2>
+        <form action="GEt">
+          <fieldset>
+            <legend>СТОИМОСТЬ:</legend>
+
+            <p>Price Range</p>
+            <div class="range-slider">
+              <span class="rangeValues"></span>
+              <input value="500" min="500" max="50000" step="500" type="range">
+              <input value="50000" min="500" max="50000" step="500" type="range">
+            </div>
+            <script>
+
+            </script>
+          </fieldset>
+          <fieldset>
+            <legend>Сетка:</legend>
+          </fieldset>
+          <fieldset>
+            <legend>ОСОБЕННОСТИ:</legend>
+          </fieldset>
+        </form>
+      </section>
+      <section class="shop-list">
+        <h2 class="visually-hidden">Список готовыз шаблонов</h2>
+        <section>
+          <h3>Сортировка</h3>
+          <b>СОРТИРОВАТЬ:</b>
+          <ul>
+            <li>По цене</li>
+            <li>По типу</li>
+            <li>По названию </li>
+            <li><a href="#" class="visually-hidden"></a></li>
+            <li><a href="#" class="visually-hidden"></a></li>
+          </ul>
+        </section>
+        <section class="templates">
+          <h2 class="nonedis">Готовые шаблоны</h2>
+          <ul class="templates-list">
+            <li tabindex="0">
+              <img src="IMG/shop-itm1.jpg.jpg" alt="Макет сайта: Sedona">
+              <div class="shop__itm__info">
+                <b>Sedona</b>
+                <p>Информационный сайт
+                  для туристов</p>
+                <a class="button" href="">9 900 руб</a>
+              </div>
+            </li>
+            <li tabindex="0"><img src="IMG/shop-itm2.jpg.jpg" alt="Макет сайта: Pink">
+                          <div class="shop__itm__info">
+                <b>Sedona</b>
+                <p>Информационный сайт
+                  для туристов</p>
+                <a class="button" href="">9 900 руб</a>
+              </div>
+            </li>
+            <li tabindex="0"><img src="IMG/shop-itm3.jpg.jpg" alt="Макет сайта: Barbershop">
+                          <div class="shop__itm__info">
+                <b>Sedona</b>
+                <p>Информационный сайт
+                  для туристов</p>
+                <a class="button" href="#">9 900 руб</a>
+              </div>
+            </li>
+            <li tabindex="0"><img src="IMG/shop-itm4.jpg.jpg" alt="Макет сайта: Mishka">
+                          <div class="shop__itm__info">
+                <b>Sedona</b>
+                <p>Информационный сайт
+                  для туристов</p>
+                <a class="button" href="">9 900 руб</a>
+              </div>
+            </li>
+            <li tabindex="0"><img src="IMG/shop-itm5.jpg.jpg" alt="Макет сайта: Alpis">
+                          <div class="shop__itm__info">
+                <b>Sedona</b>
+                <p>Информационный сайт
+                  для туристов</p>
+                <a class="button" href="">9 900 руб</a>
+              </div>
+            </li>
+            <li tabindex="0"><img src="IMG/shop-itm6.jpg.jpg" alt="Макет сайта: Kvast">
+                          <div class="shop__itm__info">
+                <b>Sedona</b>
+                <p>Информационный сайт
+                  для туристов</p>
+                <a class="button" href="">9 900 руб</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <ol class="bread-crums">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li class="bread-crums_next"><a href="#"></a></li>
+        </ol>
+      </section>
+      <section>
+        <h2 class="visually-hidden">Как нас найти</h2>
+
+
+        <article class="adress">
+          <h4>NЁRDS DESIGN STUDIO</h4>
+          <div class="adress__div">
+            <p>
+              191186, Санкт-Петербург, <br />
+              ул. Б. Конюшенная, д. 19/8
+            </p>
+            <p>
+              тел. +7 (812) 275-75-75
+            </p>
+            <a href="#view-popup" id="close-popup" class="button">Напишите нам</a>
+
+          </div>
+        </article>
+      </section>
+    </div>
+
+  </main>
+  <script class="mapp" type="text/javascript" charset="utf-8" async
+    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A609c7b2c5cd5dc6179fa2d5d829ba53629616f81dd312ed96a8be88eb7620435&amp;width=100%25&amp;height=416&amp;lang=ru_RU&amp;scroll=true"></script>
+  <footer class="main-footer content-wrap ">
+    <div class="content-wrap">
+      <ul class="social-media">
+        <li><a href="#" class="soc-link vk">Вконтакте</a></li>
+        <li><a href="#" class="soc-link">Фейсбук</a></li>
+        <li><a href="#" class="soc-link">Инстаграмм </a></li>
       </ul>
-    </nav>
-    <nav class="user-nav">
-      <a href="#" id="cart">Корзина</a>
-    </nav>
-    </header>
-  512`<wbr>';LKHGFDS'
-    <footer class="main-footer" style="background-color: black">
-        <ul class="social-media">
-          <li><img src="../svg/vk-icon.svg" alt="Вконтакте"></li>
-          <li><img src="../svg/fb-icon.svg" alt="Фейсбук"></li>
-          <li><img src="../svg/insta-icon.svg" alt="Инстаграмм"></li>
-        </ul>
+      <div>
         <strong>Давайте дружить, это выгодно!</strong>
         <p>Скидка 10% для друзей из социальных сетей.</p>
-      </footer>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
