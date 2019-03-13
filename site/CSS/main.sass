@@ -7,9 +7,11 @@
 
 .yellow 
   background-color: rgba(255, 255, 0, 0.38)  
-
+// COLORS
 $pink: #fb565a
 $gray: #eee
+$darker-gray: #a6a6a6
+// END COLORS
 /*GLOBAL
 
 ul, li
@@ -238,7 +240,6 @@ header .content-wrap
       p
         margin-bottom: 45px
         margin-top: 40px
-  table
 
 .tabld
   margin-right: 18px
@@ -262,6 +263,51 @@ header .content-wrap
     margin-bottom: 44px
 
 /*SHOP MAIN*/
+.shop-list  h2 + section
+  display: flex
+  justify-content: space-between
+  background-color: white
+  margin:
+    top: 63px
+    bottom: 59px
+.shop-sort
+  list-style: none
+  display: flex
+  text-transform: uppercase
+  li:not(:last-child)
+    margin-right:  19px
+  li:last-child
+    margin-left: auto
+    position: relative
+    top: -20px
+    height: 1px
+    a::before
+      content: " "
+      width: 0px
+      height: 0px
+      border:
+        left: 6px solid transparent
+        right:  6px solid transparent
+      margin-left: 10px
+      position: relative
+      top: 0
+      
+    .sort_top::before
+      border-bottom: 10px solid lighten( $darker-gray, 20% )
+      top: 5px
+    .sort_bottom::before
+      border-top: 10px  solid lighten( $darker-gray, 20% ) 
+      top: 32px
+    a:hover::before, a:focus::before
+      border:
+        top-color: $darker-gray
+        bottom-color: $darker-gray
+    a:active::before
+      border:
+        top-color: #000
+        bottom-color: #000    
+      
+
 
 /*FORM LABELs*/
   /*RANGE*/
@@ -430,8 +476,8 @@ main .services
     font-weight: 700
     line-height: 55px
     padding:
-      top: 53px
-      bottom: 116px
+      top: 50px
+      bottom: 109px
   .content-wrap
     display: flex
     justify-content: space-between
