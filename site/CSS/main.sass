@@ -11,6 +11,12 @@
 $pink: #fb565a
 $gray: #eee
 $darker-gray: #a6a6a6
+$black: #000
+$light-balck: #283136
+%zero
+  padding: 0
+  margin: 0
+  border: 0px
 // END COLORS
 /*GLOBAL
 
@@ -263,19 +269,38 @@ header .content-wrap
     margin-bottom: 44px
 
 /*SHOP MAIN*/
+
+
 .shop-list  h2 + section
   display: flex
   justify-content: space-between
   background-color: white
   margin:
-    top: 63px
-    bottom: 59px
+    top: 58px
+    bottom: 52px
+  b
+    font-size: 18px
+    font-weight: 700
+    line-height: 18px
 .shop-sort
   list-style: none
   display: flex
   text-transform: uppercase
+  width: 360px
+  justify-content: space-between
+  a
+    font-size: 14px
+    font-weight: 400
+    line-height: 18px
+    text-transform: uppercase
+    color: rgba(0, 0, 0, 0.2)
+    text-decoration: none
+  a:hover, a:focus  
+    color: rgba(0, 0, 0, 0.6)
+  a:active
+    color: black  
   li:not(:last-child)
-    margin-right:  19px
+    margin-right:  25px
   li:last-child
     margin-left: auto
     position: relative
@@ -294,6 +319,7 @@ header .content-wrap
       
     .sort_top::before
       border-bottom: 10px solid lighten( $darker-gray, 20% )
+      
       top: 5px
     .sort_bottom::before
       border-top: 10px  solid lighten( $darker-gray, 20% ) 
@@ -306,7 +332,30 @@ header .content-wrap
       border:
         top-color: #000
         bottom-color: #000    
-      
+
+
+fieldset
+  border: none
+  @extend %zero
+  & legend
+    font-size: 18px
+    font-weight: 700
+    line-height: 30px
+    text-transform: uppercase
+    margin-left: -1.5px
+  &:first-child legend
+    letter-spacing: 0.5px
+    margin-bottom: 56px
+  &:nth-child(2) legend
+    margin-bottom: 7px
+  &:nth-child(3) legend
+    padding-top: 34px
+    margin-bottom: 0.5em
+
+
+.range-slider
+  margin-bottom: 62px
+  height: 116px
 
 
 /*FORM LABELs*/
@@ -346,65 +395,84 @@ header .content-wrap
 
 #slider-3:checked ~ .slider_overflow
   transform: translate(-2320px)
-// .form-radio
+
+%label
+  display: inline-block
+  color: $light-balck 
+  margin:
+    left: 30px
+    bottom: 0.5em
+  input:not(:disabled) + label:hover, input:not(:disabled) + label:focus 
+    color: black
+
   
-//   width: 4px
-//   height: 4px
-//   background-color: #fff
-//   outline: 2px solid #c1c1c1, 5px solid black
-//   border-radius: 50%
-//   display: inline-block
-//   width: 25px
-//   height: 25px
-//   cursor: pointer
-//   z-index: 10
-//   &:first-child
-//     position: absolute
-//     top: 450px
-//     left: 745px
-//   &:nth-child(2)
-//     position: absolute
-//     top: 450px
-//     left: 780px
-//   &:last-child
-//     position: absolute
-//     top: 450px
-//     left: 815px
+  
 
-// .slider__label
-//   position: absolute
-//   top: 0px
-//   left: 150px
-//   z-index: 300
 
-// #slider-1:checked ~ .slider__label label[for="slider-1"], #slider-2:checked ~ .slider__label label[for="slider-2"], #slider-3:checked ~ .slider__label label[for="slider-3"]
-//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath fill='%23eeeeee' d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3Ccircle fill='%234D4D4D' cx='12.5' cy='12.5' r='4.5'/%3E%3C/svg%3E%0A")
+.label-form-radio
+  @extend %label
+  &::before
+    content: url(../svg/radio-off.svg)
+    opacity: 0.4
+    display: inline-block
+    width: 25px
+    height: 25px
+    margin-right: 10px
+    cursor: pointer
+    z-index: 10
+    position: relative
+    margin-left: -30px
+    top:  6px
 
-// #slider-1:hover:checked ~ .slider__label label[for="slider-1"], #slider-2:hover:checked ~ .slider__label label[for="slider-2"], #slider-3:hover:checked ~ .slider__label label[for="slider-3"]
-//   opacity: 1
-//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath fill='%23eeeeee' d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3Ccircle fill='%234D4D4D' cx='12.5' cy='12.5' r='4.5'/%3E%3C/svg%3E%0A")
 
-// #slider-1:hover ~ .slider__label label[for="slider-1"], #slider-2:hover ~ .slider__label label[for="slider-2"], #slider-3:hover ~ .slider__label label[for="slider-3"]
-//   opacity: 1
-//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath fill='%23eeeeee' d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3C/svg%3E")
+.radio-legend
+  #layout1:checked + label[for="layout1"]::before, #layout2:checked + label[for="layout2"]::before, #layout3:checked + label[for="layout3"]::before
+    content: url(../svg/radio-on.svg)
+  label[for="layout1"]:hover::before, label[for="layout2"]:hover::before, label[for="layout3"]:hover::before
+    opacity: 1  
+  #layout1:disabled + label[for="layout1"]::before, #layout2:disabled + label[for="layout2"]::before, #layout3:disabled + label[for="layout3"]::before,
+  #layout1:disabled + label[for="layout1"], #layout2:disabled + label[for="layout2"], #layout3:disabled + label[for="layout3"]
+    opacity: 0.2
+    color: lighten($light-balck , 20%)
 
-// #slider-1:disabled:checked ~ .slider__label label[for="slider-1"], #slider-2:disabled:checked ~ .slider__label label[for="slider-2"], #slider-3:disabled:checked ~ .slider__label label[for="slider-3"]
-//   opacity: 0.3
-//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath fill='%23eeeeee' d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3Ccircle fill='%234D4D4D' cx='12.5' cy='12.5' r='4.5'/%3E%3C/svg%3E%0A")
+.label-form-checkbox
+  @extend %label
+  margin-bottom: 0.6em
+  &::before
+    content: url(../svg/checkbox-off.svg)
+    opacity: 0.4
+    display: inline-block
+    width: 25px
+    height: 25px
+    margin-right: 10px
+    cursor: pointer
+    z-index: 10
+    position: relative
+    margin-left: -30px
+    top:  6px
 
-// #slider-1:disabled ~ .slider__label label[for="slider-1"], #slider-2:disabled ~ .slider__label label[for="slider-2"], #slider-3:disabled ~ .slider__label label[for="slider-3"]
-//   opacity: 0.3
-//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath fill='%23eeeeee' d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3C/svg%3E")
+@for $check from 1 through 5
+  #check#{$check}:checked + label[for="check#{$check}"]::before
+    content: url(../svg/checkbox-on.svg)
+  #check#{$check}:not(:disabled) + label[for="check#{$check}"]:not(:disabled):hover::before
+    opacity: 1
+  #check#{$check}:disabled + label[for="check#{$check}"]::before, #check#{$check}:disabled + label[for="check#{$check}"]
+    opacity: 0.2
 
-// #slider-1:checked ~ .slider_overflow
-//   transform: translate(0px)
 
-// #slider-2:checked ~ .slider_overflow
-//   transform: translate(-1160px)
-
-// #slider-3:checked ~ .slider_overflow
-//   transform: translate(-2320px)
-
+.shop-form .button
+  display: inline-block
+  padding: 19px 88px 18px 89px
+  margin-top: 35px
+  background-color: $gray
+  color: black
+  &:hover, &:focus
+    background-color: #dfdfdf
+  &:active
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1)
+    background-color: #d5d5d5
+    color: black
+    opacity: 0.3
 .button
   &:hover, &:focus
     background-color: #e74246
@@ -481,12 +549,19 @@ main .services
   .content-wrap
     display: flex
     justify-content: space-between
+    position: relative
     .shop-form
       width: 260px
+      padding: 0
+      background-color: #fff 
+      margin-top: 55px
     .shop-list
       display: flex
       flex-direction: column
       width: 760px
+      margin: 0
+      padding: 0
+      margin-left: auto
   .templates-list
     display: flex
     list-style: none
@@ -496,7 +571,7 @@ main .services
       position: relative
       margin-top: 40px
       transition: 0.3s ease
-      margin-bottom: 30px
+      margin-bottom: 25px
     li:nth-of-type(2n)
       margin-left: 40px
     li:hover .shop__itm__info, li:focus .shop__itm__info
@@ -627,6 +702,9 @@ main .services
     padding-right: 140px
   li
     margin-right: 10px
+
+.main-footer .content-wrap
+
 
 .social-media
   a

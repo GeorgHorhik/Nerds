@@ -32,26 +32,44 @@
     <div class="content-wrap">
       <section class="shop-form">
         <h2 class="visually-hidden">Фильтры поиска</h2>
-        <form action="GEt">
+        <form action="/echo" method="post" oninput="sell_before.value=sell_before.value" >
           <fieldset>
             <legend>СТОИМОСТЬ:</legend>
 
-            <p>Price Range</p>
+            
             <div class="range-slider">
               <span class="rangeValues"></span>
-              <input value="500" min="500" max="50000" step="500" type="range">
-              <input value="50000" min="500" max="50000" step="500" type="range">
+              <input value="500" min="500" max="50000" step="500" type="range" id="sell_before">
+              <input value="50000" min="500" max="50000" step="500" type="range" id="sell_after">
+              <output name="sell_before"></output>
             </div>
             <script>
 
             </script>
           </fieldset>
-          <fieldset>
+          <fieldset class="radio-legend">
             <legend>Сетка:</legend>
+            <input type="radio" name="layout" id="layout1" class="visually-hidden" >
+            <label class="label-form-radio"  for="layout1">Адаптивная</label>  <br>             
+            <input type="radio" name="layout" id="layout2" class="visually-hidden" >
+            <label  class=" disabled-label label-form-radio" for="layout2">Фиксированная</label> <br>
+            <input  type="radio" name="layout" id="layout3" class="visually-hidden" >
+            <label  class="label-form-radio" for="layout3">Резиновая</label>
           </fieldset>
-          <fieldset>
+          <fieldset class="checkbox-area">
             <legend>ОСОБЕННОСТИ:</legend>
+              <input class="visually-hidden" type="checkbox" name="checkbox-Slider" id="check1">
+              <label class="label-form-checkbox" for="check1">Слайдер</label><br>
+              <input class="visually-hidden" type="checkbox" name="checkbox-advantagesBlock" id="check2">
+              <label class="label-form-checkbox" for="check2">Блок преимуществ</label><br>
+              <input class="visually-hidden" type="checkbox" name="checkbox-news" id="check3">
+              <label class="label-form-checkbox" for="check3">Новости</label><br>
+              <input class="visually-hidden" type="checkbox" name="checkbox-gallery" id="check4">
+              <label class="label-form-checkbox" for="check4">Галерея</label><br>
+              <input  class="visually-hidden" type="checkbox" name="checkbox-cart" id="check5">
+              <label class="label-form-checkbox" for="check5">Корзина</label>
           </fieldset>
+          <button class="button" type="submit">ПОКАЗАТЬ</button>
         </form>
       </section>
       <section class="shop-list">
@@ -60,11 +78,11 @@
           <h3 class="visually-hidden">Сортировка</h3>
           <b>СОРТИРОВАТЬ:</b>
           <ul class="shop-sort">
-            <li>По цене</li>
-            <li>По типу</li>
-            <li>По названию </li>
-            <li><a href="#" class="sort_top"></a>
-            <a href="#" class="sort_bottom"></a></li>
+            <li><a tabindex="0" href="#">По цене</a></li>
+            <li><a tabindex="0" href="#">По типу</a></li>
+            <li><a tabindex="0" href="#">По названию </a></li>
+            <li><a tabindex="0" href="#" class="sort_bottom"></a>
+            <a href="#" class="sort_top"></a></li>
           </ul>
         </section>
         <section class="templates">
